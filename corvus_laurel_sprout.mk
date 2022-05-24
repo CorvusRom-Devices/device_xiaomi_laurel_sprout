@@ -25,12 +25,10 @@ $(call inherit-product, vendor/corvus/config/common_full_phone.mk)
 # Corvus Official
 CORVUS_MAINTAINER := H3M3L
 RAVEN_LAIR := Official
+FOD_RESOURCES := true
 
 # FaceUnlock
 TARGET_FACE_UNLOCK_SUPPORTED := true
-
-FOD_ANIMATIONS := true
-HAS_FOD := true
 
 # Pixel charging animation
 TARGET_INCLUDE_PIXEL_CHARGER := true
