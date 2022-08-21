@@ -4,7 +4,8 @@ persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac
 persist.bluetooth.a2dp_offload.disabled=false
 
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
-    bluetooth.device.class_of_device=90,2,12
+    bluetooth.device.class_of_device=90,2,12 \
+    bluetooth.profile.asha.central=false
 
 # Charger
 ro.charger.disable_init_blank=true
