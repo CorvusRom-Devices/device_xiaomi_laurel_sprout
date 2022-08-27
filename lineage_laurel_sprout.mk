@@ -19,11 +19,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 
-# Inherit some common xdroid stuff
-$(call inherit-product, vendor/xdroid/config/common.mk)
+# Inherit some common lineage stuff
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 #gms
-$(call inherit-product, vendor/google/gms/config.mk/
+$(call inherit-product, vendor/gapps/basic/config.mk)
 
 # Inherit from laurel_sprout device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
@@ -31,7 +31,7 @@ $(call inherit-product, $(LOCAL_PATH)/device.mk)
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := laurel_sprout
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_NAME := xdroid_laurel_sprout
+PRODUCT_NAME := lineage_laurel_sprout
 PRODUCT_MODEL := Mi A3
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
@@ -45,10 +45,10 @@ BUILD_FINGERPRINT := google/redfin/redfin:12/SP1A.211105.003/7757856:user/releas
 
 
 #props
+WITH_GMS := true
 WITH_GAPPS := true
 TARGET_SHIPS_SEPERATE_GAPPS_BUILD := true
-XDROID_BOOT := 720
-XDROID_MAINTAINER := AnirudhKosgi
+TARGET_BOOT_ANIMATION_RES := 720
 TARGET_GAPPS_ARCH := arm64
 TARGET_HAS_FOD := true
 TARGET_SHIP_GCAM_GO := false
