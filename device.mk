@@ -453,6 +453,7 @@ PRODUCT_PACKAGES_DEBUG += \
 
 # Shim
 PRODUCT_PACKAGES += \
+    libims_shim \
 	libwatermark_shim
 
 # Wifi
