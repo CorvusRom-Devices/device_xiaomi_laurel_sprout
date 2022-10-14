@@ -1,6 +1,6 @@
 # Audio
 PRODUCT_PROPERTY_OVERRIDES += \
-    vendor.audio.feature.compr_voip.enable=true
+    vendor.audio.feature.compr_voip.enable=false
 
 # ACDB override
 PRODUCT_PROPERTY_OVERRIDES += \
