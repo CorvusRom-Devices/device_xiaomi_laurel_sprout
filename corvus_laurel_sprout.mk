@@ -19,11 +19,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 
-# Inherit some common lineage stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common corvus stuff
+$(call inherit-product, vendor/corvus/config/common_full_phone.mk)
 
-#gms
-$(call inherit-product, vendor/gapps/basic/config.mk)
 
 # Inherit from laurel_sprout device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
@@ -31,7 +29,7 @@ $(call inherit-product, $(LOCAL_PATH)/device.mk)
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := laurel_sprout
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_NAME := lineage_laurel_sprout
+PRODUCT_NAME := corvus_laurel_sprout
 PRODUCT_MODEL := Mi A3
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
@@ -43,18 +41,17 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 BUILD_FINGERPRINT := Xiaomi/laurel_sprout/laurel_sprout:11/RKQ1.200903.002/V12.0.26.0.RFQMIXM:user/release-keys
 
+# Corvus Official
+CORVUS_MAINTAINER := H3M3L
+RAVEN_LAIR := Official
+FOD_RESOURCES := true
 #props
-WITH_GMS := true
-WITH_GAPPS := true
-TARGET_SHIPS_SEPERATE_GAPPS_BUILD := true
+USE_GAPPS := true
 TARGET_BOOT_ANIMATION_RES := 720
 TARGET_GAPPS_ARCH := arm64
-TARGET_HAS_FOD := true
 TARGET_SHIP_GCAM_GO := false
 TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_USES_BLUR := true
-EXTRA_udfps_ANIMATIONS := true
-TARGET_GAPPS_ARCH := arm64
 TARGET_SUPPORTS_ADAPTIVE_CHARGING := true
 
 # Use gestures by default
